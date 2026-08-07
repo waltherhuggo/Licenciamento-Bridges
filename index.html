@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Bridges — Licenças | Neo Ally Tecnologia</title>
+<!--
+  ============================================================================
+  PÁGINA DE LICENÇAS DO BRIDGES — Neo Ally Tecnologia
+  ============================================================================
+  O aplicativo lê esta página (GET simples, como um curl) e procura o
+  fingerprint da máquina nas linhas da tabela abaixo.
+
+  ORDEM DAS COLUNAS (o aplicativo lê pela posição — não trocar):
+    1. Fingerprint   (obrigatória)  ex.: A1B2-C3D4-E5F6-A7B8-C9D0
+    2. Status        (obrigatória)  ativa / bloqueada
+    3. Cliente       (opcional)     razão social exibida no aplicativo
+    4. Validade      (opcional)     DD/MM/AAAA — vazio = sem vencimento
+    5. Integrações   (opcional)     limite de envios — vazio = 2
+
+  COMO LIBERAR UMA MÁQUINA: adicione uma linha <tr> com o fingerprint.
+  COMO BLOQUEAR: troque o status para "bloqueada" (ou remova a linha).
+  Status aceitos como liberado: ativa / ativo / active / liberada
+
+  Teste rápido no terminal:  curl https://bridges-psi.vercel.app/
+  ============================================================================
+-->
+<style>
+  body { font-family: "Segoe UI", Arial, sans-serif; background: #14181d;
+         color: #e6e6e6; margin: 40px auto; max-width: 860px; }
+  h1   { font-size: 1.3rem; color: #4da3ff; }
+  table { border-collapse: collapse; width: 100%; margin-top: 16px; }
+  th, td { border: 1px solid #333c46; padding: 10px 14px; text-align: left; }
+  td:first-child { font-family: Consolas, monospace; }
+  th   { background: #1f2831; color: #9fb7cc; }
+  footer { margin-top: 24px; font-size: 0.8rem; color: #7a8794; }
+</style>
+</head>
+<body>
+<h1>Bridges — Licenças</h1>
+
+<table>
+  <tr>
+    <th>Fingerprint</th>
+    <th>Status</th>
+    <th>Cliente</th>
+    <th>Validade</th>
+  </tr>
+  <tr>
+    <td>04E1-776B-A413-F703-BE59</td>
+    <td>ativa</td>
+    <td>[PREENCHER — razão social do cliente]</td>
+    <td>31/08/2027</td>
+  </tr>
+</table>
+
+<footer>Neo Ally Tecnologia — controle de licenças do Bridges.
+Página consultada automaticamente pelo aplicativo.</footer>
+</body>
+</html>
